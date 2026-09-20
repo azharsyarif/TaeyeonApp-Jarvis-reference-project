@@ -68,7 +68,7 @@
 ```mermaid
 flowchart TB
     subgraph Trigger_Layer ["1. Trigger & Activation Layer"]
-        WW["Offline Wake Word ('Hey Jarvis')"]
+        WW["Offline Wake Word (Hey Jarvis)"]
         HK["Global Hotkey (Alt + Space)"]
         ST["System Tray Icon"]
     end
@@ -92,10 +92,11 @@ flowchart TB
     end
 
     Trigger_Layer --> Core_Engine
-    Core_Engine <-->|WebSockets (Sub-500ms)| Cloud_AI
-    Cloud_AI -->|Tool Call Request| Action_Layer
-    Action_Layer -->|Tool Call Result| Cloud_AI
-    Core_Engine -->|Qt Signals State & Energy| HUD
+    Core_Engine -->|"PCM Audio & Vision Stream"| Cloud_AI
+    Cloud_AI -->|"Realtime Audio Response"| Core_Engine
+    Cloud_AI -->|"Tool Call Request"| Action_Layer
+    Action_Layer -->|"Tool Execution Result"| Cloud_AI
+    Core_Engine -->|"Qt Signals (State & Energy)"| HUD
 ```
 
 ---
