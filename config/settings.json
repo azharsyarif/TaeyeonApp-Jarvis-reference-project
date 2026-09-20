@@ -1,0 +1,37 @@
+{
+  "activation": {
+    "hotkey": "alt+space",
+    "secondary_hotkey": "windows+shift+j",
+    "wake_word": "hey jarvis",
+    "wake_word_enabled": true
+  },
+  "gemini": {
+    "model": "gemini-3.1-flash-live-preview",
+    "voice": "Puck",
+    "temperature": 0.6,
+    "system_instruction_path": "config/system_prompt.txt"
+  },
+  "audio": {
+    "input_sample_rate": 16000,
+    "output_sample_rate": 24000,
+    "channels": 1,
+    "chunk_size": 1024,
+    "vad_energy_threshold": 0.015,
+    "barge_in_enabled": true,
+    "enable_chimes": true
+  },
+  "hud": {
+    "enabled": true,
+    "width": 320,
+    "height": 70,
+    "bottom_margin": 60,
+    "opacity": 0.92,
+    "theme_color": "#00f0ff",
+    "click_through": true
+  },
+  "tools": {
+    "allow_system_exec": true,
+    "safe_mode": true,
+    "screenshot_compression_quality": 80
+  }
+}

@@ -1,13 +1,15 @@
-# Secrets and Environment Variables
+# Secrets — never commit real API keys
 .env
 *.env
 .env.*
+!.env.example
 
 # Python Cache & Bytecode
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+*.egg-info/
 .pytest_cache/
 
 # Virtual Environments
@@ -19,6 +21,7 @@ ENV/
 # IDE & OS files
 .vscode/
 .idea/
+.DS_Store
 Thumbs.db
 Desktop.ini
 *.log
